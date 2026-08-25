@@ -14,6 +14,9 @@ gem 'puma', '~> 5.0'
 #gem for authentication 
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
+
+#stock data
+gem 'alphavantage'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -26,6 +29,11 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#Save the API key locally
+group :development, :test do
+  gem 'dotenv-rails', groups: [:development, :test]
+end
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
